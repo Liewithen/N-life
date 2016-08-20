@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Njust-info</title>
+		<meta name="description" content="Blueprint: Responsive Full Width Tabs" />
+		<meta name="keywords" content="responsive tabs, full width tabs, template, blueprint" />
+		<meta name="author" content="Codrops" />
+		<link rel="stylesheet" type="text/css" href="/static/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/component.css" />
+		<link rel="stylesheet" type="text/css" href="/static/css/materialicon.css" />
+
+		<link rel="stylesheet" href="/static/css/style.css" media="screen" type="text/css" />
+
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="/static/css/zzsc-demo.css">
+		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+		<link rel="stylesheet" href="/static/css/paper-collapse.min.css">
+		<!--[if IE]>
+  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<style>
+			.asxxcontainer {
+				max-width: 50rem;
+				margin-right: auto;
+				margin-left: auto;
+				padding: 2rem;
+			}
+			.mt1 {
+				margin-top: 1rem;
+			}
+
+			.align-right {
+				text-align: right;
+			}
+			.mouse-pointer {
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header class="clearfix">
+				<span>Liewithen <span class="bp-icon bp-icon-about" data-content="Liewithen 是一个由兴趣集结的个人组织，所有相关网站内容均由Liewithen成员翻译整理，并全部遵循MIT协议发布"></span></span>
+				<h1 style="color: #47a3da">南京理工大学第三方教务处</h1>
+				<br/><br/><br/><br/>
+
+				<a><h3 style="color: #47a3da">{{ name }}&nbsp第{{ zc }}周</h3></a>
+			</header>
+			<div id="tabs" class="tabs">
+				<nav>
+					<ul>
+						<li><a href="#section-1" ><i class="mdi-action-account-balance"><span>课表查询</span></i></a></li>
+						<li id="grade_tab"><a href="#section-2" ><i class="mdi-action-assignment"><span>成绩查询</span></i></a></li>
+						<li><a href="#section-3" ><i class="mdi-social-school"><span>考试查询</span></i></a></li>
+						<li><a href="#section-4" ><i class="mdi-social-group"><span>自习室查询</span></i></a></li>
+						<li><a href="#section-5" ><i class="mdi-social-notifications-on"><span>信息中心</span></i></a></li>
+					</ul>
+				</nav>
+				<div class="content">
+					<section id="section-1">
+						<div class="row">
+							<div class="col s12">
+								<ul class="ttabs z-depth-1">
+									<li class="ttab col s1"><a href="#test1">M</a></li>
+									<li class="ttab col s1"><a href="#test2">T</a></li>
+									<li class="ttab col s1"><a href="#test3">W</a></li>
+									<li class="ttab col s1"><a href="#test4">T</a></li>
+									<li class="ttab col s1"><a href="#test5">F</a></li>
+									<li class="ttab col s1"><a href="#test6">S</a></li>
+									<li class="ttab col s1"><a href="#test0">S</a></li>
+								</ul>
+							</div>
+							<div id="test1" class="col s12" name="timetable"><div class="zzsc-container">
+								<div class="asxxcontainer">
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-5"></i>
+												&nbsp&nbsp第一大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.0|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-6"></i>
+												&nbsp&nbsp第二大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.7|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-1"></i>
+												&nbsp&nbsp第三大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.14|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-4"></i>
+												&nbsp&nbsp第四大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.21|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-7"></i>
+												&nbsp&nbsp第五大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.28|safe }}</p>
+										</div>
+									</div>
+								</div>
+							</div></div>
+							<div id="test2" class="col s12" name="timetable"><div class="zzsc-container">
+								<div class="asxxcontainer">
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-5"></i>
+												&nbsp&nbsp第一大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.1|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-6"></i>
+												&nbsp&nbsp第二大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.8|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-1"></i>
+												&nbsp&nbsp第三大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.15|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-4"></i>
+												&nbsp&nbsp第四大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.22|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-7"></i>
+												&nbsp&nbsp第五大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.29|safe }}</p>
+										</div>
+									</div>
+								</div>
+							</div></div>
+							<div id="test3" class="col s12" name="timetable"><div class="zzsc-container">
+								<div class="asxxcontainer">
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-5"></i>
+												&nbsp&nbsp第一大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.2|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-6"></i>
+												&nbsp&nbsp第二大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.9|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-1"></i>
+												&nbsp&nbsp第三大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.16|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-4"></i>
+												&nbsp&nbsp第四大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.23|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-7"></i>
+												&nbsp&nbsp第五大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.30|safe }}</p>
+										</div>
+									</div>
+								</div>
+							</div></div>
+							<div id="test4" class="col s12" name="timetable"><div class="zzsc-container">
+								<div class="asxxcontainer">
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-5"></i>
+												&nbsp&nbsp第一大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.3|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-6"></i>
+												&nbsp&nbsp第二大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.10|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-1"></i>
+												&nbsp&nbsp第三大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.17|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-4"></i>
+												&nbsp&nbsp第四大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.24|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-7"></i>
+												&nbsp&nbsp第五大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.31|safe }}</p>
+										</div>
+									</div>
+								</div>
+							</div></div>
+							<div id="test5" class="col s12" name="timetable"><div class="zzsc-container">
+								<div class="asxxcontainer">
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-5"></i>
+												&nbsp&nbsp第一大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.4|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-6"></i>
+												&nbsp&nbsp第二大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.11|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-1"></i>
+												&nbsp&nbsp第三大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.18|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-4"></i>
+												&nbsp&nbsp第四大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.25|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-7"></i>
+												&nbsp&nbsp第五大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.32|safe }}</p>
+										</div>
+									</div>
+								</div>
+							</div></div>
+							<div id="test6" class="col s12" name="timetable"><div class="zzsc-container">
+								<div class="asxxcontainer">
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-5"></i>
+												&nbsp&nbsp第一大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.5|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-6"></i>
+												&nbsp&nbsp第二大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.12|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-1"></i>
+												&nbsp&nbsp第三大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.19|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-4"></i>
+												&nbsp&nbsp第四大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.26|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-7"></i>
+												&nbsp&nbsp第五大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.33|safe }}</p>
+										</div>
+									</div>
+								</div>
+							</div></div>
+							<div id="test0" class="col s12" name="timetable"><div class="zzsc-container">
+								<div class="asxxcontainer">
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-5"></i>
+												&nbsp&nbsp第一大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.6|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-6"></i>
+												&nbsp&nbsp第二大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.13|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-1"></i>
+												&nbsp&nbsp第三大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.20|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-4"></i>
+												&nbsp&nbsp第四大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.27|safe }}</p>
+										</div>
+									</div>
+									<div class="collapse-card">
+										<div class="collapse-card__heading">
+											<h4 class="collapse-card__title">
+												<i class="mdi-image-brightness-7"></i>
+												&nbsp&nbsp第五大节
+											</h4>
+										</div>
+										<div class="collapse-card__body">
+											<p>{{ course_all.34|safe }}</p>
+										</div>
+									</div>
+								</div>
+							</div></div>
+						</div>
+					</section>
+
+
+					<section id="section-2">
+							<div class="accordion">
+							     <div class="card-panel blue-grey darken-4">
+
+									    <div class="row">
+										<span>&nbsp</span>
+									    <span  id="all_gpa"></span>
+									<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
+									     <span  id="all_grade"></span>
+									    </div>
+
+							     </div>
+							</div>
+							<ul id="accordion" class="accordion" >
+							<li id="2016-2017-2">
+								<div class="link"><i class="mdi-editor-border-vertical"></i><p name="term">2016-2017下半学年</p><i class="fa fa-chevron-down"></i></div>
+								<ul class="submenu"><br/></ul>
+							</li>
+							<li id="2016-2017-1">
+								<div class="link"><i class="mdi-editor-border-right"></i><p name="term">2016-2017上半学年</p><i class="fa fa-chevron-down"></i></div>
+								<ul class="submenu"><br/></ul>
+							</li>
+							<li id="2015-2016-2">
+								<div class="link"><i class="mdi-editor-border-outer"></i><p name="term">2015-2016下半学年</p><i class="fa fa-chevron-down"></i></div>
+								<ul class="submenu"><br/></ul>
+							</li>
+							<li id="2015-2016-1">
+								<div class="link"><i class="mdi-editor-border-left"></i><p name="term">2015-2016上半学年</p><i class="fa fa-chevron-down"></i></div>
+								<ul class="submenu"><br/></ul>
+							</li>
+							<li id="2014-2015-2">
+								<div class="link"><i class="mdi-editor-border-inner"></i><p name="term">2014-2015下半学年</p><i class="fa fa-chevron-down"></i></div>
+								<ul class="submenu"><br/></ul>
+							</li>
+							<li id="2014-2015-1">
+								<div class="link"><i class="mdi-editor-border-horizontal"></i><p name="term">2014-2015上半学年</p><i class="fa fa-chevron-down"></i></div>
+								<ul class="submenu"><br/></ul>
+							</li>
+							<li id="2013-2014-2">
+								<div class="link"><i class="mdi-editor-border-clear"></i><p name="term">2013-2014下半学年</p><i class="fa fa-chevron-down"></i></div>
+								<ul class="submenu"><br/></ul>
+							</li>
+							<li id="2013-2014-1">
+								<div class="link"><i class="mdi-editor-border-bottom"></i><p name="term">2013-2014上半学年</p><i class="fa fa-chevron-down"></i></div>
+								<ul class="submenu"><br/></ul>
+							</li>
+						</ul>
+						{% for item in grade %}
+							{% ifequal item.4 '必修' %}
+
+								<a name="{{ item.0 }}">
+									<div class="row">
+									    <div class="col s6">
+									    {{ item.1 }}
+									    </div>
+									    <div class="col s2">
+									    <p name="c-cj" title="grade">{{ item.2 }}</p>
+									    </div>
+									    <div class="col s1">
+									    <p name="c-xf" title="credit">{{ item.3 }}</p>
+									    </div>
+									    <div class="col s3">
+									    {{ item.4 }}
+									    </div>
+									</div>
+								</a>
+
+							{% endifequal %}
+							{% ifequal item.4 '公选' %}
+
+								 <a name="{{ item.0 }}">
+									<div class="row">
+									    <div class="col s6">
+									    {{ item.1 }}
+									    </div>
+									    <div class="col s2">
+									   	<p title="grade">{{ item.2 }}</p>
+									    </div>
+									    <div class="col s1">
+									    <p title="credit">{{ item.3 }}</p>
+									    </div>
+									    <div class="col s3">
+									    {{ item.4 }}
+									    </div>
+									</div>
+								</a>
+
+							{% endifequal %}
+							{% ifequal item.4 '任选' %}
+
+								 <a name="{{ item.0 }}">
+									<div class="row">
+									    <div class="col s6">
+									    {{ item.1 }}
+									    </div>
+									    <div class="col s2">
+									   	<p name="c-cj" title="grade">{{ item.2 }}</p>
+									    </div>
+									    <div class="col s1">
+									    <p name="c-xf" title="credit">{{ item.3 }}</p>
+									    </div>
+									    <div class="col s3">
+									    {{ item.4 }}
+									    </div>
+									</div>
+								</a>
+
+							{% endifequal %}
+						{% endfor %}
+					</section>
+
+
+					<section id="section-3">
+						<div class="container">
+							考试查询(施工中)
+						</div>
+					</section>
+
+					<section id="section-4">
+						<div class="container">
+							自习室查询(施工中)
+						</div>
+					</section>
+					<section id="section-5">
+						<div class="container">
+							校园动态(施工中)
+						</div>
+					</section>
+				</div><!-- /content -->
+			</div><!-- /tabs -->
+
+
+		</div>
+
+
+		<script src="/static/js/cbpFWTabs.js"></script>
+		<script>
+			new CBPFWTabs( document.getElementById( 'tabs' ) );
+
+		</script>
+		<script src='/static/js/jquery.min.js'></script>
+		<script src='/static/js/materialize.min.js'></script>
+		<script src="/static/js/index.js"></script>
+		<script src="/static/js/paper-collapse.min.js"></script>
+		<script>
+			$('.collapse-card').paperCollapse();
+			$("#grade_tab").click(function(){
+				$("#accordion > li:visible > ul").eq(0).slideDown(1000).parent().addClass("open");
+			})
+			$(document).ready(function(){
+				$("#accordion > li").hide();
+				function single_gpa(score){
+					if(score.match(/^[\u4e00-\u9fa5]+$/)){
+						if(score.match(/^[\u4f18\u79c0]+$/)) return [90, 4.0];
+						if(score.match(/^[\u826f\u597d]+$/)) return [80, 3.0];
+						if(score.match(/^[\u4e2d\u7b49]+$/)) return [70, 2.0];
+						if(score.match(/^[\u53ca\u683c]+$/)) return [60, 1.0];
+						if(score.match(/^[\u4e0d\u53ca\u683c]+$/)) return [0, 0.0];
+					}
+					else{
+						score = parseFloat(score);
+						if(100 >= score && score >=90) return [score, 4.0];
+						if(90 > score && score >= 85) return [score, 3.7];
+						if(85 > score && score >= 82) return [score, 3.3];
+						if(82 > score && score >= 78) return [score, 3.0];
+						if(78 > score && score >= 75) return [score, 2.7];
+						if(75 > score && score >= 72) return [score, 2.3];
+						if(72 > score && score >= 68) return [score, 2.0];
+						if(68 > score && score >= 64) return [score, 1.5];
+						if(64 > score && score >= 60) return [score, 1.0];
+						if(60 > score) return [score, 0.0];
+					}
+				}
+				function Calculate_GPA(score,credit){
+					var credit_sum = 0.0;
+					var gpa_sum = 0.0;
+					var grade_sum = 0.0;
+					for(var i = 0; i < score.length;i++){
+						var gpa = single_gpa(score.eq(i).text())[1];
+						var grade = single_gpa(score.eq(i).text())[0];
+						var c = parseFloat(credit.eq(i).text());
+						gpa_sum += gpa * c;
+						grade_sum += grade * c;
+						credit_sum += c;
+					}
+					var GPA = (gpa_sum/credit_sum).toFixed(2);
+					var GRADE = (grade_sum/credit_sum).toFixed(2);
+					return [GPA, GRADE, credit_sum];
+				}
+				function addCompulsory_GPA(grade,grade_head){
+					var score = grade.find("p[name='c-cj']");
+					var credit = grade.find("p[name='c-xf']");
+					var Result = Calculate_GPA(score,credit);
+					var GPA = Result[0];
+					var GRADE = Result[1];
+					var CREDIT = Result[2];
+					grade_head.find("p[name='term']").after("<p> 必修 GPA : "+GPA+" 均分 : "+GRADE+" 总学分 : "+CREDIT+"</p>");
+				}
+				function addALL_GPA(grade,grade_head){
+					var score = grade.find("p[title='grade']");
+					var credit = grade.find("p[title='credit']");
+					var Result = Calculate_GPA(score,credit);
+					var GPA = Result[0];
+					var GRADE = Result[1];
+					var CREDIT = Result[2];
+					grade_head.find("p[name='term']").after("<p> 全部 GPA : "+GPA+" 均分 : "+GRADE+" 总学分 : "+CREDIT+"</p>");
+					grade_head.find("ul").append(grade);
+					grade_head.find("ul").append("<br>");
+					grade_head.show();
+				}
+				if($("a[name='2016-2017-2']")[0]){
+					var grade_head = $("#2016-2017-2");
+					var grade = $("a[name='2016-2017-2']");
+					addALL_GPA(grade,grade_head)
+					addCompulsory_GPA(grade,grade_head);
+				}
+				if($("a[name='2016-2017-1']")[0]){
+					var grade_head = $("#2016-2017-1");
+					var grade = $("a[name='2016-2017-1']");
+					addALL_GPA(grade,grade_head)
+					addCompulsory_GPA(grade,grade_head);
+				}
+				if($("a[name='2015-2016-2']")[0]){
+					var grade_head = $("#2015-2016-2");
+					var grade = $("a[name='2015-2016-2']");
+					addALL_GPA(grade,grade_head)
+					addCompulsory_GPA(grade,grade_head);
+				}
+				if($("a[name='2015-2016-1']")[0]){
+					var grade_head = $("#2015-2016-1");
+					var grade = $("a[name='2015-2016-1']");
+					addALL_GPA(grade,grade_head)
+					addCompulsory_GPA(grade,grade_head);
+				}
+				if($("a[name='2014-2015-2']")[0]){
+					var grade_head = $("#2014-2015-2");
+					var grade = $("a[name='2014-2015-2']");
+					addALL_GPA(grade,grade_head)
+					addCompulsory_GPA(grade,grade_head);
+				}
+				if($("a[name='2014-2015-1']")[0]){
+					var grade_head = $("#2014-2015-1");
+					var grade = $("a[name='2014-2015-1']");
+					addALL_GPA(grade,grade_head)
+					addCompulsory_GPA(grade,grade_head);
+				}
+				if($("a[name='2013-2014-2']")[0]){
+					var grade_head = $("#2013-2014-2");
+					var grade = $("a[name='2013-2014-2']");
+					addALL_GPA(grade,grade_head)
+					addCompulsory_GPA(grade,grade_head);
+				}
+				if($("a[name='2013-2014-1']")[0]){
+					var grade_head = $("#2013-2014-1");
+					var grade = $("a[name='2013-2014-1']");
+					addALL_GPA(grade,grade_head)
+					addCompulsory_GPA(grade,grade_head);
+				}
+				var all_grade = $("p[name='c-cj']");
+				var all_credit = $("p[name='c-xf']");
+				var all_result = Calculate_GPA(all_grade,all_credit);
+				$("#all_gpa").text("GPA : "+all_result[0]);
+				$("#all_grade").text("均分 : "+all_result[1]);
+				var course = $(".collapse-card__body");
+				for(var i = 0;i < course.length; i++){
+					if(!course.eq(i).find("p").text().match(/^[\s]{1}/))
+						course.eq(i).show().parent().addClass("active");
+				}
+				var day = new Date();
+				var today = day.getDay();
+				$('ul.ttabs').ttabs('select_tab','test'+ today);
+			})
+		</script>
+	</body>
+
+</html>
