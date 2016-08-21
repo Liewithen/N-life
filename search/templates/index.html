@@ -18,16 +18,13 @@
 input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset;}
 		</style>
 		<script>
-			$(function() {
-			  if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
-			      $(window).load(function(){
-				  $('ul input:not(input[type=submit])').each(function(){
-				      var outHtml = this.outerHTML;
-				      $(this).append(outHtml);
-				  });
-			      });
-			  }
-			});
+		var _hmt = _hmt || [];
+		(function() {
+		  var hm = document.createElement("script");
+		  hm.src = "//hm.baidu.com/hm.js?2cfbb8bafca447b2200892a0f2f90c66";
+		  var s = document.getElementsByTagName("script")[0]; 
+		  s.parentNode.insertBefore(hm, s);
+		})();
 		</script>
 	</head>
 	<body class="demo-2">
