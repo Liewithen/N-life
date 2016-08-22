@@ -14,7 +14,15 @@
 		<link rel="stylesheet" type="text/css" href="/static/css/effect2.css" />
 		<link rel="stylesheet" type="text/css" href="/static/css/materialize.css" />
 		<script src="/static/js/modernizr.custom.js"></script>
-
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+			  var hm = document.createElement("script");
+			  hm.src = "//hm.baidu.com/hm.js?2cfbb8bafca447b2200892a0f2f90c66";
+			  var s = document.getElementsByTagName("script")[0]; 
+			  s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
 	</head>
 	<body class="demo-2">
 		<div id="ip-container" class="ip-container">
@@ -527,8 +535,11 @@ c9 15 39 72 67 127 28 55 65 127 82 159 17 32 31 64 31 71 0 11 -41 35 -60 35
 								<br/>
 						</div>
 					</div>
-
-
+					<div class="container">
+						<h5 class="center-align">
+							{{ error }}
+						</h5>
+					</div>
 					<div class="row">
 
 						<div class="col s1 m3 l4">
@@ -546,7 +557,7 @@ c9 15 39 72 67 127 28 55 65 127 82 159 17 32 31 64 31 71 0 11 -41 35 -60 35
 						<div class="col s1 m3 l4">
 							<br/>
 						</div>
-
+				
 					</div>
 
 				</form>
