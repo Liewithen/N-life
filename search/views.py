@@ -34,7 +34,10 @@ def Deal_course(pageCode):
 
 @csrf_exempt
 def index(req):
-	return render_to_response('index.html')
+	if req.GET.get('message') == 'error':
+		return render_to_response('index.html',{'error':'账号密码错误或教务处崩了'})
+	else:
+		return render_to_response('index.html',{'error':''})
 
 @csrf_exempt
 def info(req):
@@ -83,7 +86,7 @@ def info(req):
 
 		else:
 
-			return HttpResponseRedirect('/index/')
+			return HttpResponseRedirect('/index/?message=error')
 	else:
 		return HttpResponseRedirect('/index/')
 
