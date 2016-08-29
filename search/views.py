@@ -6,6 +6,7 @@ import time
 from django.shortcuts import render,render_to_response
 from django.http import HttpResponse,HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
+from django.db import connection
 #成绩正则
 @csrf_exempt
 def Deal_grade(pageCode):
@@ -89,4 +90,32 @@ def info(req):
 			return HttpResponseRedirect('/index/?message=error')
 	else:
 		return HttpResponseRedirect('/index/')
+
+def FindRoom(req):
+
+	ZC = req.GET.get('zc')
+	DAY = req.GET.get('day')
+	JC = req.GET.get('jc')
+
+	def JudegJc(JC):
+		if JC == 1:
+			return 'oneisavl'
+		if JC == 2:
+			return 'twoisavl'
+		if JC == 3:
+			return 'threeisavl'
+		if JC == 4:
+			return 'fourisavl'
+		if JC == 5:
+			return 'fiveisavl'
+
+	sql = 'select roomid from search_saow'+ZC+' where timeofday ='+DAY+' and '+JudegJc(int(JC))
+
+	cursor = connection.cursor()
+	cursor.execute(sql)
+
+	roomid = cursor.fetchall()
+
+	return HttpResponse(roomid)
+
 
