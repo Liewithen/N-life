@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/$',index),
     url(r'^info/$',info),
+    url(r'^find/',FindRoom),
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve',   
     { 'document_root': settings.STATIC_ROOT}),  
 ]
