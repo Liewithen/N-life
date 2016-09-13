@@ -72,8 +72,8 @@ def info(req):
 
 			WeekNumber = time.strftime('%W',time.localtime(time.time()))
 			zc = int(WeekNumber) - 33
-			if zc <= 0:
-				zc = 1
+			if zc <= 4:
+				zc = 5
 			if zc >= 30:
 				zc = 30
 			data_course = {'cj0701id':'','zc':str(zc),'demo':'','xnxq01id':'2016-2017-1'}
@@ -97,6 +97,8 @@ def FindRoom(req):
 	DAY = req.GET.get('day')
 	JC = req.GET.get('jc')
 
+	responseRoom = []
+
 	def JudegJc(JC):
 		if JC == 1:
 			return 'oneisavl'
@@ -116,6 +118,8 @@ def FindRoom(req):
 
 	roomid = cursor.fetchall()
 
-	return HttpResponse(roomid)
+	for r in roomid:
+		responseRoom.append(r[0]+' ')
+	return HttpResponse(responseRoom)
 
 

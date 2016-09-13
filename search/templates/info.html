@@ -5,22 +5,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Njust-info</title>
-		<meta name="description" content="Blueprint: Responsive Full Width Tabs" />
-		<meta name="keywords" content="responsive tabs, full width tabs, template, blueprint" />
-		<meta name="author" content="Codrops" />
+		<!--<meta name="description" content="Blueprint: Responsive Full Width Tabs" />-->
+		<!--&lt;!&ndash;<meta name="keywords" content="responsive tabs, full width tabs, template, blueprint" />&ndash;&gt;-->
+		<!--<meta name="author" content="Codrops" />-->
 		<link rel="stylesheet" type="text/css" href="/static/css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="/static/css/component.css" />
 		<link rel="stylesheet" type="text/css" href="/static/css/materialicon.css" />
-
 		<link rel="stylesheet" href="/static/css/style.css" media="screen" type="text/css" />
-
+		<link rel="stylesheet" type="text/css" href="/static/css/exp.css" />
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/static/css/zzsc-demo.css">
-		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+		<!--<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>-->
 		<link rel="stylesheet" href="/static/css/paper-collapse.min.css">
-		<!--[if IE]>
-  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
 		<style>
 			.asxxcontainer {
 				max-width: 50rem;
@@ -43,7 +39,7 @@
 	<body>
 		<div class="container">
 			<header class="clearfix">
-				<span>Liewithen <span class="bp-icon bp-icon-about" data-content="Liewithen 是一个由兴趣集结的个人组织，所有相关网站内容均由Liewithen成员翻译整理，并全部遵循MIT协议发布"></span></span>
+				<span>Liewithen <span class="bp-icon bp-icon-about" data-content="Liewithen 是一个由兴趣集结的个人组织，所有相关网站内容均由Liewithen成员编写整理，并全部遵循MIT协议发布"></span></span>
 				<h1 style="color: #47a3da">南京理工大学第三方教务处</h1>
 				<br/><br/><br/><br/>
 
@@ -54,8 +50,8 @@
 					<ul>
 						<li><a href="#section-1" ><i class="mdi-action-account-balance"><span>课表查询</span></i></a></li>
 						<li id="grade_tab"><a href="#section-2" ><i class="mdi-action-assignment"><span>成绩查询</span></i></a></li>
-						<li><a href="#section-3" ><i class="mdi-social-school"><span>考试查询</span></i></a></li>
-						<li><a href="#section-4" ><i class="mdi-social-group"><span>自习室查询</span></i></a></li>
+						<li><a href="#section-3" ><i class="mdi-social-group"><span>自习室查询</span></i></a></li>
+						<li><a href="#section-4" ><i class="mdi-social-school"><span>考试查询</span></i></a></li>
 						<li><a href="#section-5" ><i class="mdi-social-notifications-on"><span>信息中心</span></i></a></li>
 					</ul>
 				</nav>
@@ -491,48 +487,53 @@
 
 
 					<section id="section-2">
-							<div class="accordion">
-							     <div class="card-panel blue-grey darken-4">
-
-									    <div class="row">
-										<span>&nbsp</span>
-									    <span  id="all_gpa"></span>
-									<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-									     <span  id="all_grade"></span>
-									    </div>
-
-							     </div>
+						<div class="accordion">
+							<div class="row">
+								<div class="col s6">
+									<div class="card-panel blue-grey darken-4 z-depth-1-half">
+										&nbsp&nbsp<span  id="all_gpa"style="font-size: 90%"></span>
+									</div>
+								</div>
+								<div class="col s6">
+									<div class="card-panel blue-grey darken-4 z-depth-1-half">
+										<span  id="all_grade" style="font-size: 90%"></span>
+									</div>
+								</div>
 							</div>
+						</div>
+
+
+
 							<ul id="accordion" class="accordion" >
-							<li id="2016-2017-2" class="z-depth-2">
+							<li id="2016-2017-2" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-vertical"></i><p name="term">2016-2017下半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
-							<li id="2016-2017-1" class="z-depth-2">
+							<li id="2016-2017-1" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-right"></i><p name="term">2016-2017上半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
-							<li id="2015-2016-2" class="z-depth-2">
+							<li id="2015-2016-2" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-outer"></i><p name="term">2015-2016下半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
-							<li id="2015-2016-1" class="z-depth-2">
+							<li id="2015-2016-1" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-left"></i><p name="term">2015-2016上半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
-							<li id="2014-2015-2" class="z-depth-2">
+							<li id="2014-2015-2" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-inner"></i><p name="term">2014-2015下半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
-							<li id="2014-2015-1" class="z-depth-2">
+							<li id="2014-2015-1" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-horizontal"></i><p name="term">2014-2015上半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
-							<li id="2013-2014-2" class="z-depth-2">
+							<li id="2013-2014-2" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-clear"></i><p name="term">2013-2014下半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
-							<li id="2013-2014-1" class="z-depth-2">
+							<li id="2013-2014-1" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-bottom"></i><p name="term">2013-2014上半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
@@ -602,15 +603,86 @@
 					</section>
 
 
-					<section id="section-3">
-						<div class="container">
-							考试查询(施工中)
+					<section id="section-3" style="height: 500px">
+						<div class="input-field col s12">
+							<select name="weeks-select">
+								<!--<option value="" disabled selected>请选择周次</option>-->
+								<option value="1">第1周</option>
+								<option value="2">第2周</option>
+								<option value="3">第3周</option>
+								<option value="4">第4周</option>
+								<option value="5">第5周</option>
+								<option value="6">第6周</option>
+								<option value="7">第7周</option>
+								<option value="8">第8周</option>
+								<option value="9">第9周</option>
+								<option value="10">第10周</option>
+								<option value="11">第11周</option>
+								<option value="12">第12周</option>
+								<option value="13">第13周</option>
+								<option value="14">第14周</option>
+								<option value="15">第15周</option>
+								<option value="16">第16周</option>
+								<option value="17">第17周</option>
+								<option value="18">第18周</option>
+								<option value="19">第19周</option>
+								<option value="20">第20周</option>
+								<option value="21">第21周</option>
+								<option value="22">第22周</option>
+							</select>
+							<label>周次</label>
+						</div>
+						<div class="input-field col s12">
+							<select name="day-select">
+								<option value="1">周一</option>
+								<option value="2">周二</option>
+								<option value="3">周三</option>
+								<option value="4">周四</option>
+								<option value="5">周五</option>
+							</select>
+							<label>星期</label>
+						</div>
+						<div class="input-field col s12">
+							<select name="hours-select">
+								<option value="1">第一大节</option>
+								<option value="2">第二大节</option>
+								<option value="3">第三大节</option>
+								<option value="4">第四大节</option>
+								<option value="5">第五大节</option>
+							</select>
+							<label>节次</label>
+						</div>
+						<!-- Modal Trigger -->
+						<br>
+						<br>
+						<div class="row">
+							<div class="col s5">
+								<br>
+							</div>
+							<div class="col s2">
+								<button class="btn-floating btn-large waves-effect waves-light btn modal-trigger blue lighten-1 center-align" href="#modal1" onclick="find()">查</button>
+							</div>
+							<div class="col s5">
+								<br>
+							</div>
+						</div>
+
+
+						<!-- Modal Structure -->
+						<div id="modal1" class="modal modal-fixed-footer" style="width:100%">
+							<div class="modal-content">
+								<h4>查询结果</h4>
+								<p id="classroom-result"></p>
+							</div>
+							<div class="modal-footer">
+								<a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">隐藏</a>
+							</div>
 						</div>
 					</section>
 
 					<section id="section-4">
 						<div class="container">
-							自习室查询(施工中)
+							考试查询(施工中)
 						</div>
 					</section>
 					<section id="section-5">
@@ -634,12 +706,14 @@
 		<script src='/static/js/materialize.min.js'></script>
 		<script src="/static/js/index.js"></script>
 		<script src="/static/js/paper-collapse.min.js"></script>
-		<script>
+		<script>		
 			$('.collapse-card').paperCollapse();
 			$("#grade_tab").click(function(){
 				$("#accordion > li:visible > ul").eq(0).slideDown(1000).parent().addClass("open");
 			})
 			$(document).ready(function(){
+				$('.modal-trigger').leanModal();
+				$('select').material_select();
 				$("#accordion > li").hide();
 				function single_gpa(score){
 					if(score.match(/^[\u4e00-\u9fa5]+$/)){
@@ -762,7 +836,22 @@
 				var today = day.getDay();
 				$('ul.ttabs').ttabs('select_tab','test'+ today);
 			})
+			function find(){
+		     $.get("/find",
+				{
+					zc:$("select[name='weeks-select']").val(),
+					day:$("select[name='day-select']").val(),
+					jc:$("select[name='hours-select']").val()
+				},
+				function(data,textStatus){$("#classroom-result").html(data)});				
+			}
+
+               
+			
 		</script>
+	<script>
+
+	</script>
 	</body>
 
 </html>
