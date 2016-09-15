@@ -792,8 +792,10 @@
 				$('.modal-trigger').leanModal({
 					dismissible: true, 
 					opacity: .1, 
-					ready: function() { find();}, 
-					complete: function() {$("#classroom-result").empty();} 
+					ready: function(){ find();}, 
+					complete: function(){
+							$("#classroom-result").html("<a>加载中...</a>");
+						} 
 					}
 				);				
 				if($("a[name='2016-2017-2']")[0]){
