@@ -761,21 +761,25 @@
 					grade_head.find("ul").append("<br>");
 					grade_head.show();
 				}
+				function openCourse(){
+					var course = $(".collapse-card__body");
+					for(var i = 0;i < course.length; i++){
+						if(!course.eq(i).find("p").text().match(/^[\s]{1}/))
+							course.eq(i).show().parent().addClass("active");
+					}						
+				}
 				$("#grade_tab").click(function(){
 					$("#accordion > li:visible > ul").eq(0).slideDown(1000).parent().addClass("open");
 				})	
 				$("#course_tab").click(function(){
 					$('ul.ttabs').ttabs('select_tab','day'+ today);
+					openCourse();
 				})
 				var day = new Date();
 				var today = day.getDay();
 				$('ul.ttabs').ttabs('select_tab','day'+ today);
-				$('.collapse-card').paperCollapse();
-				var course = $(".collapse-card__body");
-				for(var i = 0;i < course.length; i++){
-					if(!course.eq(i).find("p").text().match(/^[\s]{1}/))
-						course.eq(i).show().parent().addClass("active");
-				}				
+				$('.collapse-card').paperCollapse();	
+				openCourse();
 				$("#accordion > li").hide();
 				var all_grade = $("p[name='c-cj']");
 				var all_credit = $("p[name='c-xf']");
@@ -791,10 +795,20 @@
 				$('select').material_select();	
 				$('.modal-trigger').leanModal({
 					dismissible: true, 
-					opacity: .1, 
+					opacity: .3, 
 					ready: function(){ find();}, 
 					complete: function(){
-							$("#classroom-result").html("<a>加载中...</a>");
+							var load = ' ';
+							load += '<div class="center">'
+							load += '<div class="preloader-wrapper big active">'
+							load += '<div class="spinner-layer spinner-blue">'
+							load += '<div class="circle-clipper left">'
+							load += '<div class="circle"></div>'
+							load += '</div><div class="gap-patch">'
+							load += '<div class="circle"></div>'
+							load += '</div><div class="circle-clipper right">'
+							load += ' <div class="circle"></div></div></div></div>'
+							$("#classroom-result").html(load);
 						} 
 					}
 				);				
