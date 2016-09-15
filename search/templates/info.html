@@ -661,7 +661,7 @@
 								<br>
 							</div>
 							<div class="col s2">
-								<button class="btn-floating btn-large waves-effect waves-light btn modal-trigger blue lighten-1 center-align" href="#modal1" onclick="find()">查</button>
+								<a class="btn-floating btn-large waves-effect waves-light btn modal-trigger blue lighten-1 center-align" href="#modal1">查</a>
 							</div>
 							<div class="col s5">
 								<br>
@@ -789,7 +789,13 @@
 				}
 				$("select[name='day-select'] > option").eq(temple_today - 1).attr("selected",true);
 				$('select').material_select();	
-				$('.modal-trigger').leanModal();				
+				$('.modal-trigger').leanModal({
+					dismissible: true, 
+					opacity: .1, 
+					ready: function() { find();}, 
+					complete: function() {$("#classroom-result").empty();} 
+					}
+				);				
 				if($("a[name='2016-2017-2']")[0]){
 					var grade_head = $("#2016-2017-2");
 					var grade = $("a[name='2016-2017-2']");
