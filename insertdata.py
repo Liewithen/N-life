@@ -26,140 +26,140 @@ def main():
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW2(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW2.objects.bulk_create(RoomList)
 	f = open("Room_Info/3.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW3(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW3.objects.bulk_create(RoomList)
 	f = open("Room_Info/4.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW4(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW4.objects.bulk_create(RoomList)
 	f = open("Room_Info/5.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW5(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW5.objects.bulk_create(RoomList)
 	f = open("Room_Info/6.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW6(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW6.objects.bulk_create(RoomList)
 	f = open("Room_Info/7.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW7(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW7.objects.bulk_create(RoomList)
 	f = open("Room_Info/8.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW8(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW8.objects.bulk_create(RoomList)
 	f = open("Room_Info/9.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW9(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW9.objects.bulk_create(RoomList)
 	f = open("Room_Info/10.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW10(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW10.objects.bulk_create(RoomList)
 	f = open("Room_Info/11.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW11(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW11.objects.bulk_create(RoomList)
 	f = open("Room_Info/12.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW12(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW12.objects.bulk_create(RoomList)
 	f = open("Room_Info/13.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW13(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW13.objects.bulk_create(RoomList)
 	f = open("Room_Info/14.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW14(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW14.objects.bulk_create(RoomList)
 	f = open("Room_Info/15.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW15(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW15.objects.bulk_create(RoomList)
 	f = open("Room_Info/16.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW16(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW16.objects.bulk_create(RoomList)
 	f = open("Room_Info/17.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW17(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW17.objects.bulk_create(RoomList)
 	f = open("Room_Info/18.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW18(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW18.objects.bulk_create(RoomList)
 	f = open("Room_Info/19.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW19(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW19.objects.bulk_create(RoomList)
 	f = open("Room_Info/20.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW20(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW20.objects.bulk_create(RoomList)
 	f = open("Room_Info/21.txt")
 	RoomList = []
 	for line in f:
 		parts = line.split(', ')
-		RoomList.append(SAOW1(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
+		RoomList.append(SAOW21(roomid=parts[0],timeOfDay=int(parts[1]),building=int(parts[2]),oneIsAVL=int(parts[3]),twoIsAVL=int(parts[4]),threeIsAVL=int(parts[5]),fourIsAVL=int(parts[6]),fiveIsAVL=int(parts[7])))
 	f.close()
 	SAOW21.objects.bulk_create(RoomList)
 if __name__ == "__main__":
