@@ -840,13 +840,19 @@
 				}
 			})
 			function find(){
-		     $.get("/find",
-				{
-					zc:$("select[name='weeks-select']").val(),
-					day:$("select[name='day-select']").val(),
-					jc:$("select[name='hours-select']").val()
-				},
-				function(data,textStatus){$("#classroom-result").html(data)});				
+				$.ajax({  
+					type: "GET",  
+					url: "/find",     
+					dataType: "text",  
+					data: {  
+						zc:$("select[name='weeks-select']").val(),
+						day:$("select[name='day-select']").val(),
+						jc:$("select[name='hours-select']").val()   
+					},  
+					success: function(data) {  
+						$("#classroom-result").html(data);
+					}  
+				});  							
 			}			
 		</script>
 	</body>
