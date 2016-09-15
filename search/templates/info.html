@@ -768,6 +768,19 @@
 							course.eq(i).show().parent().addClass("active");
 					}						
 				}
+				function loadWaves(){
+					var load = ' ';
+					load += '<div class="center">'
+					load += '<div class="preloader-wrapper big active">'
+					load += '<div class="spinner-layer spinner-blue">'
+					load += '<div class="circle-clipper left">'
+					load += '<div class="circle"></div>'
+					load += '</div><div class="gap-patch">'
+					load += '<div class="circle"></div>'
+					load += '</div><div class="circle-clipper right">'
+					load += ' <div class="circle"></div></div></div></div>'
+					$("#classroom-result").html(load);					
+				}
 				$("#grade_tab").click(function(){
 					$("#accordion > li:visible > ul").eq(0).slideDown(1000).parent().addClass("open");
 				})	
@@ -793,22 +806,13 @@
 				}
 				$("select[name='day-select'] > option").eq(temple_today - 1).attr("selected",true);
 				$('select').material_select();	
+				loadWaves();
 				$('.modal-trigger').leanModal({
 					dismissible: true, 
 					opacity: .3, 
 					ready: function(){ find();}, 
 					complete: function(){
-							var load = ' ';
-							load += '<div class="center">'
-							load += '<div class="preloader-wrapper big active">'
-							load += '<div class="spinner-layer spinner-blue">'
-							load += '<div class="circle-clipper left">'
-							load += '<div class="circle"></div>'
-							load += '</div><div class="gap-patch">'
-							load += '<div class="circle"></div>'
-							load += '</div><div class="circle-clipper right">'
-							load += ' <div class="circle"></div></div></div></div>'
-							$("#classroom-result").html(load);
+							loadWaves();
 						} 
 					}
 				);				
