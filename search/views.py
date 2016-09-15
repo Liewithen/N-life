@@ -74,8 +74,8 @@ def info(req):
 			zc = int(WeekNumber) - 33
 			if zc <= 4:
 				zc = 5
-			if zc >= 30:
-				zc = 30
+			if zc >= 21:
+				zc = 21
 			data_course = {'cj0701id':'','zc':str(zc),'demo':'','xnxq01id':'2016-2017-1'}
 			req_course = s.post('http://202.119.81.113:9080/njlgdx/xskb/xskb_list.do?Ves632DSdyV=NEW_XSD_PYGL',data=data_course)
 			items_course_all = Deal_course(req_course.content)

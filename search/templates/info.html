@@ -43,7 +43,7 @@
 				<h1 style="color: #47a3da">南京理工大学第三方教务处</h1>
 				<br/><br/><br/><br/>
 
-				<a><h3 style="color: #47a3da">{{ name }}&nbsp第{{ zc }}周</h3></a>
+				<a><h3 style="color: #47a3da">{{ name }}&nbsp第<a id="zc">{{ zc }}</a>周</h3></a>
 			</header>
 			<div id="tabs" class="tabs">
 				<nav>
@@ -708,14 +708,7 @@
 		<script src="/static/js/index.js"></script>
 		<script src="/static/js/paper-collapse.min.js"></script>
 		<script>		
-			$('.collapse-card').paperCollapse();
-			$("#grade_tab").click(function(){
-				$("#accordion > li:visible > ul").eq(0).slideDown(1000).parent().addClass("open");
-			})
-			$(document).ready(function(){
-				$('.modal-trigger').leanModal();
-				$('select').material_select();
-				$("#accordion > li").hide();
+			$(document).ready(function(){			
 				function single_gpa(score){
 					if(score.match(/^[\u4e00-\u9fa5]+$/)){
 						if(score.match(/^[\u4f18\u79c0]+$/)) return [90, 4.0];
@@ -775,6 +768,31 @@
 					grade_head.find("ul").append("<br>");
 					grade_head.show();
 				}
+				$("#grade_tab").click(function(){
+					$("#accordion > li:visible > ul").eq(0).slideDown(1000).parent().addClass("open");
+				})	
+				var day = new Date();
+				var today = day.getDay();
+				$('ul.ttabs').ttabs('select_tab','test'+ today);
+				$('.collapse-card').paperCollapse();
+				var course = $(".collapse-card__body");
+				for(var i = 0;i < course.length; i++){
+					if(!course.eq(i).find("p").text().match(/^[\s]{1}/))
+						course.eq(i).show().parent().addClass("active");
+				}				
+				$("#accordion > li").hide();
+				var all_grade = $("p[name='c-cj']");
+				var all_credit = $("p[name='c-xf']");
+				var all_result = Calculate_GPA(all_grade,all_credit);
+				$("#all_gpa").text("GPA : "+all_result[0]);
+				$("#all_grade").text("均分 : "+all_result[1]);			
+				$("select[name='weeks-select'] > option").eq($("#zc").text()-1).attr("selected",true);
+				if(today == 0){
+					today = 7;
+				}
+				$("select[name='day-select'] > option").eq(today-1).attr("selected",true);
+				$('select').material_select();	
+				$('.modal-trigger').leanModal();				
 				if($("a[name='2016-2017-2']")[0]){
 					var grade_head = $("#2016-2017-2");
 					var grade = $("a[name='2016-2017-2']");
@@ -823,19 +841,7 @@
 					addALL_GPA(grade,grade_head)
 					addCompulsory_GPA(grade,grade_head);
 				}
-				var all_grade = $("p[name='c-cj']");
-				var all_credit = $("p[name='c-xf']");
-				var all_result = Calculate_GPA(all_grade,all_credit);
-				$("#all_gpa").text("GPA : "+all_result[0]);
-				$("#all_grade").text("均分 : "+all_result[1]);
-				var course = $(".collapse-card__body");
-				for(var i = 0;i < course.length; i++){
-					if(!course.eq(i).find("p").text().match(/^[\s]{1}/))
-						course.eq(i).show().parent().addClass("active");
-				}
-				var day = new Date();
-				var today = day.getDay();
-				$('ul.ttabs').ttabs('select_tab','test'+ today);
+		
 			})
 			function find(){
 		     $.get("/find",
