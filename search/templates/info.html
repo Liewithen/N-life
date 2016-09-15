@@ -48,7 +48,7 @@
 			<div id="tabs" class="tabs">
 				<nav>
 					<ul>
-						<li><a href="#section-1" ><i class="mdi-action-account-balance"><span>课表查询</span></i></a></li>
+						<li id="course_tab"><a href="#section-1" ><i class="mdi-action-account-balance"><span>课表查询</span></i></a></li>
 						<li id="grade_tab"><a href="#section-2" ><i class="mdi-action-assignment"><span>成绩查询</span></i></a></li>
 						<li><a href="#section-3" ><i class="mdi-social-group"><span>自习室查询</span></i></a></li>
 						<li><a href="#section-4" ><i class="mdi-social-school"><span>考试查询</span></i></a></li>
@@ -60,16 +60,16 @@
 						<div class="row">
 							<div class="col s12">
 								<ul class="ttabs z-depth-1">
-									<li class="ttab col s1"><a href="#test1">M</a></li>
-									<li class="ttab col s1"><a href="#test2">T</a></li>
-									<li class="ttab col s1"><a href="#test3">W</a></li>
-									<li class="ttab col s1"><a href="#test4">T</a></li>
-									<li class="ttab col s1"><a href="#test5">F</a></li>
-									<li class="ttab col s1"><a href="#test6">S</a></li>
-									<li class="ttab col s1"><a href="#test0">S</a></li>
+									<li class="ttab col s1"><a href="#day1">M</a></li>
+									<li class="ttab col s1"><a href="#day2">T</a></li>
+									<li class="ttab col s1"><a href="#day3">W</a></li>
+									<li class="ttab col s1"><a href="#day4">T</a></li>
+									<li class="ttab col s1"><a href="#day5">F</a></li>
+									<li class="ttab col s1"><a href="#day6">S</a></li>
+									<li class="ttab col s1"><a href="#day0">S</a></li>
 								</ul>
 							</div>
-							<div id="test1" class="col s12" name="timetable"><div class="zzsc-container">
+							<div id="day1" class="col s12" name="timetable"><div class="zzsc-container">
 								<div class="asxxcontainer">
 									<div class="collapse-card">
 										<div class="collapse-card__heading">
@@ -128,7 +128,7 @@
 									</div>
 								</div>
 							</div></div>
-							<div id="test2" class="col s12" name="timetable"><div class="zzsc-container">
+							<div id="day2" class="col s12" name="timetable"><div class="zzsc-container">
 								<div class="asxxcontainer">
 									<div class="collapse-card">
 										<div class="collapse-card__heading">
@@ -187,7 +187,7 @@
 									</div>
 								</div>
 							</div></div>
-							<div id="test3" class="col s12" name="timetable"><div class="zzsc-container">
+							<div id="day3" class="col s12" name="timetable"><div class="zzsc-container">
 								<div class="asxxcontainer">
 									<div class="collapse-card">
 										<div class="collapse-card__heading">
@@ -246,7 +246,7 @@
 									</div>
 								</div>
 							</div></div>
-							<div id="test4" class="col s12" name="timetable"><div class="zzsc-container">
+							<div id="day4" class="col s12" name="timetable"><div class="zzsc-container">
 								<div class="asxxcontainer">
 									<div class="collapse-card">
 										<div class="collapse-card__heading">
@@ -305,7 +305,7 @@
 									</div>
 								</div>
 							</div></div>
-							<div id="test5" class="col s12" name="timetable"><div class="zzsc-container">
+							<div id="day5" class="col s12" name="timetable"><div class="zzsc-container">
 								<div class="asxxcontainer">
 									<div class="collapse-card">
 										<div class="collapse-card__heading">
@@ -364,7 +364,7 @@
 									</div>
 								</div>
 							</div></div>
-							<div id="test6" class="col s12" name="timetable"><div class="zzsc-container">
+							<div id="day6" class="col s12" name="timetable"><div class="zzsc-container">
 								<div class="asxxcontainer">
 									<div class="collapse-card">
 										<div class="collapse-card__heading">
@@ -423,7 +423,7 @@
 									</div>
 								</div>
 							</div></div>
-							<div id="test0" class="col s12" name="timetable"><div class="zzsc-container">
+							<div id="day0" class="col s12" name="timetable"><div class="zzsc-container">
 								<div class="asxxcontainer">
 									<div class="collapse-card">
 										<div class="collapse-card__heading">
@@ -693,21 +693,14 @@
 					</section>
 				</div><!-- /content -->
 			</div><!-- /tabs -->
-
-
 		</div>
-
-
 		<script src="/static/js/cbpFWTabs.js"></script>
-		<script>
-			new CBPFWTabs( document.getElementById( 'tabs' ) );
-
-		</script>
 		<script src='/static/js/jquery.min.js'></script>
 		<script src='/static/js/materialize.min.js'></script>
 		<script src="/static/js/index.js"></script>
 		<script src="/static/js/paper-collapse.min.js"></script>
-		<script>		
+		<script>	
+			new CBPFWTabs( document.getElementById( 'tabs' ) );	
 			$(document).ready(function(){			
 				function single_gpa(score){
 					if(score.match(/^[\u4e00-\u9fa5]+$/)){
@@ -771,9 +764,12 @@
 				$("#grade_tab").click(function(){
 					$("#accordion > li:visible > ul").eq(0).slideDown(1000).parent().addClass("open");
 				})	
+				$("#course_tab").click(function(){
+					$('ul.ttabs').ttabs('select_tab','day'+ today);
+				})
 				var day = new Date();
 				var today = day.getDay();
-				$('ul.ttabs').ttabs('select_tab','test'+ today);
+				$('ul.ttabs').ttabs('select_tab','day'+ today);
 				$('.collapse-card').paperCollapse();
 				var course = $(".collapse-card__body");
 				for(var i = 0;i < course.length; i++){
@@ -787,10 +783,11 @@
 				$("#all_gpa").text("GPA : "+all_result[0]);
 				$("#all_grade").text("均分 : "+all_result[1]);			
 				$("select[name='weeks-select'] > option").eq($("#zc").text()-1).attr("selected",true);
-				if(today == 0){
-					today = 7;
+				var temple_today = today;
+				if(temple_today  == 0){
+					temple_today = 7;
 				}
-				$("select[name='day-select'] > option").eq(today-1).attr("selected",true);
+				$("select[name='day-select'] > option").eq(temple_today - 1).attr("selected",true);
 				$('select').material_select();	
 				$('.modal-trigger').leanModal();				
 				if($("a[name='2016-2017-2']")[0]){
@@ -841,7 +838,6 @@
 					addALL_GPA(grade,grade_head)
 					addCompulsory_GPA(grade,grade_head);
 				}
-		
 			})
 			function find(){
 		     $.get("/find",
@@ -851,14 +847,8 @@
 					jc:$("select[name='hours-select']").val()
 				},
 				function(data,textStatus){$("#classroom-result").html(data)});				
-			}
-
-               
-			
+			}			
 		</script>
-	<script>
-
-	</script>
 	</body>
 
 </html>
