@@ -111,15 +111,17 @@ def FindRoom(req):
 		if JC == 5:
 			return 'fiveisavl'
 
-	sql = 'select roomid from search_saow'+ZC+' where timeofday ='+DAY+' and '+JudegJc(int(JC))
+	sql = 'select roomid from search_saow'+ZC+' where timeofday = '+DAY+' and '+JudegJc(int(JC))+' order by roomid asc'
 
 	cursor = connection.cursor()
+
 	cursor.execute(sql)
 
 	roomid = cursor.fetchall()
 
 	for r in roomid:
 		responseRoom.append(r[0]+' ')
+		
 	return HttpResponse(responseRoom)
 
 
