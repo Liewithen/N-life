@@ -5,22 +5,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Njust-info</title>
-		<meta name="description" content="Blueprint: Responsive Full Width Tabs" />
-		<meta name="keywords" content="responsive tabs, full width tabs, template, blueprint" />
-		<meta name="author" content="Codrops" />
+		<!--<meta name="description" content="Blueprint: Responsive Full Width Tabs" />-->
+		<!--&lt;!&ndash;<meta name="keywords" content="responsive tabs, full width tabs, template, blueprint" />&ndash;&gt;-->
+		<!--<meta name="author" content="Codrops" />-->
 		<link rel="stylesheet" type="text/css" href="/static/css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="/static/css/component.css" />
 		<link rel="stylesheet" type="text/css" href="/static/css/materialicon.css" />
-
 		<link rel="stylesheet" href="/static/css/style.css" media="screen" type="text/css" />
-
+		<link rel="stylesheet" type="text/css" href="/static/css/exp.css" />
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="/static/css/zzsc-demo.css">
-		<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+		<!--<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>-->
 		<link rel="stylesheet" href="/static/css/paper-collapse.min.css">
-		<!--[if IE]>
-  		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
 		<style>
 			.asxxcontainer {
 				max-width: 50rem;
@@ -43,19 +39,19 @@
 	<body>
 		<div class="container">
 			<header class="clearfix">
-				<span>Liewithen <span class="bp-icon bp-icon-about" data-content="Liewithen 是一个由兴趣集结的个人组织，所有相关网站内容均由Liewithen成员翻译整理，并全部遵循MIT协议发布"></span></span>
+				<span>Liewithen <span class="bp-icon bp-icon-about" data-content="Liewithen 是一个由兴趣集结的个人组织，所有相关网站内容均由Liewithen成员编写整理，并全部遵循MIT协议发布"></span></span>
 				<h1 style="color: #47a3da">南京理工大学第三方教务处</h1>
 				<br/><br/><br/><br/>
 
-				<a><h3 style="color: #47a3da">{{ name }}&nbsp第{{ zc }}周</h3></a>
+				<a><h3 style="color: #47a3da">{{ name }}&nbsp第<a id="zc">{{ zc }}</a>周</h3></a>
 			</header>
 			<div id="tabs" class="tabs">
 				<nav>
 					<ul>
-						<li><a href="#section-1" ><i class="mdi-action-account-balance"><span>课表查询</span></i></a></li>
+						<li id="course_tab"><a href="#section-1" ><i class="mdi-action-account-balance"><span>课表查询</span></i></a></li>
 						<li id="grade_tab"><a href="#section-2" ><i class="mdi-action-assignment"><span>成绩查询</span></i></a></li>
-						<li><a href="#section-3" ><i class="mdi-social-school"><span>考试查询</span></i></a></li>
-						<li><a href="#section-4" ><i class="mdi-social-group"><span>自习室查询</span></i></a></li>
+						<li><a href="#section-3" ><i class="mdi-social-group"><span>自习室查询</span></i></a></li>
+						<li><a href="#section-4" ><i class="mdi-social-school"><span>考试查询</span></i></a></li>
 						<li><a href="#section-5" ><i class="mdi-social-notifications-on"><span>信息中心</span></i></a></li>
 					</ul>
 				</nav>
@@ -64,16 +60,16 @@
 						<div class="row">
 							<div class="col s12">
 								<ul class="ttabs z-depth-1">
-									<li class="ttab col s1"><a href="#test1">M</a></li>
-									<li class="ttab col s1"><a href="#test2">T</a></li>
-									<li class="ttab col s1"><a href="#test3">W</a></li>
-									<li class="ttab col s1"><a href="#test4">T</a></li>
-									<li class="ttab col s1"><a href="#test5">F</a></li>
-									<li class="ttab col s1"><a href="#test6">S</a></li>
-									<li class="ttab col s1"><a href="#test0">S</a></li>
+									<li class="ttab col s1"><a href="#day1">M</a></li>
+									<li class="ttab col s1"><a href="#day2">T</a></li>
+									<li class="ttab col s1"><a href="#day3">W</a></li>
+									<li class="ttab col s1"><a href="#day4">T</a></li>
+									<li class="ttab col s1"><a href="#day5">F</a></li>
+									<li class="ttab col s1"><a href="#day6">S</a></li>
+									<li class="ttab col s1"><a href="#day0">S</a></li>
 								</ul>
 							</div>
-							<div id="test1" class="col s12" name="timetable"><div class="zzsc-container">
+							<div id="day1" class="col s12" name="timetable"><div class="zzsc-container">
 								<div class="asxxcontainer">
 									<div class="collapse-card">
 										<div class="collapse-card__heading">
@@ -132,7 +128,7 @@
 									</div>
 								</div>
 							</div></div>
-							<div id="test2" class="col s12" name="timetable"><div class="zzsc-container">
+							<div id="day2" class="col s12" name="timetable"><div class="zzsc-container">
 								<div class="asxxcontainer">
 									<div class="collapse-card">
 										<div class="collapse-card__heading">
@@ -191,7 +187,7 @@
 									</div>
 								</div>
 							</div></div>
-							<div id="test3" class="col s12" name="timetable"><div class="zzsc-container">
+							<div id="day3" class="col s12" name="timetable"><div class="zzsc-container">
 								<div class="asxxcontainer">
 									<div class="collapse-card">
 										<div class="collapse-card__heading">
@@ -250,7 +246,7 @@
 									</div>
 								</div>
 							</div></div>
-							<div id="test4" class="col s12" name="timetable"><div class="zzsc-container">
+							<div id="day4" class="col s12" name="timetable"><div class="zzsc-container">
 								<div class="asxxcontainer">
 									<div class="collapse-card">
 										<div class="collapse-card__heading">
@@ -309,7 +305,7 @@
 									</div>
 								</div>
 							</div></div>
-							<div id="test5" class="col s12" name="timetable"><div class="zzsc-container">
+							<div id="day5" class="col s12" name="timetable"><div class="zzsc-container">
 								<div class="asxxcontainer">
 									<div class="collapse-card">
 										<div class="collapse-card__heading">
@@ -368,7 +364,7 @@
 									</div>
 								</div>
 							</div></div>
-							<div id="test6" class="col s12" name="timetable"><div class="zzsc-container">
+							<div id="day6" class="col s12" name="timetable"><div class="zzsc-container">
 								<div class="asxxcontainer">
 									<div class="collapse-card">
 										<div class="collapse-card__heading">
@@ -427,7 +423,7 @@
 									</div>
 								</div>
 							</div></div>
-							<div id="test0" class="col s12" name="timetable"><div class="zzsc-container">
+							<div id="day0" class="col s12" name="timetable"><div class="zzsc-container">
 								<div class="asxxcontainer">
 									<div class="collapse-card">
 										<div class="collapse-card__heading">
@@ -491,48 +487,53 @@
 
 
 					<section id="section-2">
-							<div class="accordion">
-							     <div class="card-panel blue-grey darken-4">
-
-									    <div class="row">
-										<span>&nbsp</span>
-									    <span  id="all_gpa"></span>
-									<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</span>
-									     <span  id="all_grade"></span>
-									    </div>
-
-							     </div>
+						<div class="accordion">
+							<div class="row">
+								<div class="col s6">
+									<div class="card-panel blue-grey darken-4 z-depth-1-half">
+										&nbsp&nbsp<span  id="all_gpa"style="font-size: 90%"></span>
+									</div>
+								</div>
+								<div class="col s6">
+									<div class="card-panel blue-grey darken-4 z-depth-1-half">
+										<span  id="all_grade" style="font-size: 90%"></span>
+									</div>
+								</div>
 							</div>
+						</div>
+
+
+
 							<ul id="accordion" class="accordion" >
-							<li id="2016-2017-2">
+							<li id="2016-2017-2" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-vertical"></i><p name="term">2016-2017下半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
-							<li id="2016-2017-1">
+							<li id="2016-2017-1" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-right"></i><p name="term">2016-2017上半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
-							<li id="2015-2016-2">
+							<li id="2015-2016-2" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-outer"></i><p name="term">2015-2016下半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
-							<li id="2015-2016-1">
+							<li id="2015-2016-1" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-left"></i><p name="term">2015-2016上半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
-							<li id="2014-2015-2">
+							<li id="2014-2015-2" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-inner"></i><p name="term">2014-2015下半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
-							<li id="2014-2015-1">
+							<li id="2014-2015-1" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-horizontal"></i><p name="term">2014-2015上半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
-							<li id="2013-2014-2">
+							<li id="2013-2014-2" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-clear"></i><p name="term">2013-2014下半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
-							<li id="2013-2014-1">
+							<li id="2013-2014-1" class="z-depth-1-half">
 								<div class="link"><i class="mdi-editor-border-bottom"></i><p name="term">2013-2014上半学年</p><i class="fa fa-chevron-down"></i></div>
 								<ul class="submenu"><br/></ul>
 							</li>
@@ -602,15 +603,87 @@
 					</section>
 
 
-					<section id="section-3">
-						<div class="container">
-							考试查询(施工中)
+					<section id="section-3" style="height: 500px">
+						<div class="input-field col s12">
+							<select name="weeks-select">
+								<!--<option value="" disabled selected>请选择周次</option>-->
+								<option value="1">第1周</option>
+								<option value="2">第2周</option>
+								<option value="3">第3周</option>
+								<option value="4">第4周</option>
+								<option value="5">第5周</option>
+								<option value="6">第6周</option>
+								<option value="7">第7周</option>
+								<option value="8">第8周</option>
+								<option value="9">第9周</option>
+								<option value="10">第10周</option>
+								<option value="11">第11周</option>
+								<option value="12">第12周</option>
+								<option value="13">第13周</option>
+								<option value="14">第14周</option>
+								<option value="15">第15周</option>
+								<option value="16">第16周</option>
+								<option value="17">第17周</option>
+								<option value="18">第18周</option>
+								<option value="19">第19周</option>
+								<option value="20">第20周</option>
+								<option value="21">第21周</option>
+							</select>
+							<label>周次</label>
+						</div>
+						<div class="input-field col s12">
+							<select name="day-select">
+								<option value="1">周一</option>
+								<option value="2">周二</option>
+								<option value="3">周三</option>
+								<option value="4">周四</option>
+								<option value="5">周五</option>
+								<option value="6">周六</option>
+								<option value="7">周日</option>
+							</select>
+							<label>星期</label>
+						</div>
+						<div class="input-field col s12">
+							<select name="hours-select">
+								<option value="1">第一大节</option>
+								<option value="2">第二大节</option>
+								<option value="3">第三大节</option>
+								<option value="4">第四大节</option>
+								<option value="5">第五大节</option>
+							</select>
+							<label>节次</label>
+						</div>
+						<!-- Modal Trigger -->
+						<br>
+						<br>
+						<div class="row">
+							<div class="col s5">
+								<br>
+							</div>
+							<div class="col s2">
+								<a class="btn-floating btn-large waves-effect waves-light btn modal-trigger blue lighten-1 center-align" href="#modal1">查</a>
+							</div>
+							<div class="col s5">
+								<br>
+							</div>
+						</div>
+
+
+						<!-- Modal Structure -->
+						<div id="modal1" class="modal modal-fixed-footer" style="width:100%">
+							<div class="modal-content">
+								<h4>查询结果</h4>
+								<p id="classroom-result"></p>
+							</div>
+							<div class="modal-footer">
+								<a href="#!" class="modal-action modal-close waves-effect waves-blue btn-flat">隐藏</a>
+							</div>
 						</div>
 					</section>
 
 					<section id="section-4">
 						<div class="container">
-							自习室查询(施工中)
+							考试查询(施工中)
 						</div>
 					</section>
 					<section id="section-5">
@@ -620,27 +693,15 @@
 					</section>
 				</div><!-- /content -->
 			</div><!-- /tabs -->
-
-
 		</div>
-
-
 		<script src="/static/js/cbpFWTabs.js"></script>
-		<script>
-			new CBPFWTabs( document.getElementById( 'tabs' ) );
-
-		</script>
 		<script src='/static/js/jquery.min.js'></script>
 		<script src='/static/js/materialize.min.js'></script>
 		<script src="/static/js/index.js"></script>
 		<script src="/static/js/paper-collapse.min.js"></script>
-		<script>
-			$('.collapse-card').paperCollapse();
-			$("#grade_tab").click(function(){
-				$("#accordion > li:visible > ul").eq(0).slideDown(1000).parent().addClass("open");
-			})
-			$(document).ready(function(){
-				$("#accordion > li").hide();
+		<script>	
+			new CBPFWTabs( document.getElementById( 'tabs' ) );	
+			$(document).ready(function(){			
 				function single_gpa(score){
 					if(score.match(/^[\u4e00-\u9fa5]+$/)){
 						if(score.match(/^[\u4f18\u79c0]+$/)) return [90, 4.0];
@@ -700,6 +761,61 @@
 					grade_head.find("ul").append("<br>");
 					grade_head.show();
 				}
+				function openCourse(){
+					var course = $(".collapse-card__body");
+					for(var i = 0;i < course.length; i++){
+						if(!course.eq(i).find("p").text().match(/^[\s]{1}/))
+							course.eq(i).show().parent().addClass("active");
+					}						
+				}
+				function loadWaves(){
+					var load = ' ';
+					load += '<div class="center">'
+					load += '<div class="preloader-wrapper big active">'
+					load += '<div class="spinner-layer spinner-blue">'
+					load += '<div class="circle-clipper left">'
+					load += '<div class="circle"></div>'
+					load += '</div><div class="gap-patch">'
+					load += '<div class="circle"></div>'
+					load += '</div><div class="circle-clipper right">'
+					load += ' <div class="circle"></div></div></div></div>'
+					$("#classroom-result").html(load);					
+				}
+				$("#grade_tab").click(function(){
+					$("#accordion > li:visible > ul").eq(0).slideDown(1000).parent().addClass("open");
+				})	
+				$("#course_tab").click(function(){
+					$('ul.ttabs').ttabs('select_tab','day'+ today);
+					openCourse();
+				})
+				var day = new Date();
+				var today = day.getDay();
+				$('ul.ttabs').ttabs('select_tab','day'+ today);
+				$('.collapse-card').paperCollapse();	
+				openCourse();
+				$("#accordion > li").hide();
+				var all_grade = $("p[name='c-cj']");
+				var all_credit = $("p[name='c-xf']");
+				var all_result = Calculate_GPA(all_grade,all_credit);
+				$("#all_gpa").text("GPA : "+all_result[0]);
+				$("#all_grade").text("均分 : "+all_result[1]);			
+				$("select[name='weeks-select'] > option").eq($("#zc").text()-1).attr("selected",true);
+				var temple_today = today;
+				if(temple_today  == 0){
+					temple_today = 7;
+				}
+				$("select[name='day-select'] > option").eq(temple_today - 1).attr("selected",true);
+				$('select').material_select();	
+				loadWaves();
+				$('.modal-trigger').leanModal({
+					dismissible: true, 
+					opacity: .3, 
+					ready: function(){ find();}, 
+					complete: function(){
+							loadWaves();
+						} 
+					}
+				);				
 				if($("a[name='2016-2017-2']")[0]){
 					var grade_head = $("#2016-2017-2");
 					var grade = $("a[name='2016-2017-2']");
@@ -748,21 +864,23 @@
 					addALL_GPA(grade,grade_head)
 					addCompulsory_GPA(grade,grade_head);
 				}
-				var all_grade = $("p[name='c-cj']");
-				var all_credit = $("p[name='c-xf']");
-				var all_result = Calculate_GPA(all_grade,all_credit);
-				$("#all_gpa").text("GPA : "+all_result[0]);
-				$("#all_grade").text("均分 : "+all_result[1]);
-				var course = $(".collapse-card__body");
-				for(var i = 0;i < course.length; i++){
-					if(!course.eq(i).find("p").text().match(/^[\s]{1}/))
-						course.eq(i).show().parent().addClass("active");
-				}
-				var day = new Date();
-				var today = day.getDay();
-				$('ul.ttabs').ttabs('select_tab','test'+ today);
 			})
-		</script>
+			function find(){
+				$.ajax({  
+					type: "GET",  
+					url: "/find",     
+					dataType: "text",  
+					data: {  
+						zc:$("select[name='weeks-select']").val(),
+						day:$("select[name='day-select']").val(),
+						jc:$("select[name='hours-select']").val()   
+					},  
+					success: function(data) {  
+						$("#classroom-result").html(data);
+					}  
+				});  							
+			}			
+		</script>	
 	</body>
 
 </html>

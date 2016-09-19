@@ -6,6 +6,7 @@ import time
 from django.shortcuts import render,render_to_response
 from django.http import HttpResponse,HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
+from django.db import connection
 #成绩正则
 @csrf_exempt
 def Deal_grade(pageCode):
@@ -34,7 +35,10 @@ def Deal_course(pageCode):
 
 @csrf_exempt
 def index(req):
-	return render_to_response('index.html')
+	if req.GET.get('message') == 'error':
+		return render_to_response('index.html',{'error':'账号密码错误或教务处崩了'})
+	else:
+		return render_to_response('index.html',{'error':''})
 
 @csrf_exempt
 def info(req):
@@ -68,10 +72,10 @@ def info(req):
 
 			WeekNumber = time.strftime('%W',time.localtime(time.time()))
 			zc = int(WeekNumber) - 33
-			if zc <= 0:
-				zc = 1
-			if zc >= 30:
-				zc = 30
+			if zc <= 4:
+				zc = 5
+			if zc >= 21:
+				zc = 21
 			data_course = {'cj0701id':'','zc':str(zc),'demo':'','xnxq01id':'2016-2017-1'}
 			req_course = s.post('http://202.119.81.113:9080/njlgdx/xskb/xskb_list.do?Ves632DSdyV=NEW_XSD_PYGL',data=data_course)
 			items_course_all = Deal_course(req_course.content)
@@ -83,7 +87,41 @@ def info(req):
 
 		else:
 
-			return HttpResponseRedirect('/index/')
+			return HttpResponseRedirect('/index/?message=error')
 	else:
 		return HttpResponseRedirect('/index/')
+
+def FindRoom(req):
+
+	ZC = req.GET.get('zc')
+	DAY = req.GET.get('day')
+	JC = req.GET.get('jc')
+
+	responseRoom = []
+
+	def JudegJc(JC):
+		if JC == 1:
+			return 'oneisavl'
+		if JC == 2:
+			return 'twoisavl'
+		if JC == 3:
+			return 'threeisavl'
+		if JC == 4:
+			return 'fourisavl'
+		if JC == 5:
+			return 'fiveisavl'
+
+	sql = 'select roomid from search_saow'+ZC+' where timeofday = '+DAY+' and '+JudegJc(int(JC))+' order by roomid asc'
+
+	cursor = connection.cursor()
+
+	cursor.execute(sql)
+
+	roomid = cursor.fetchall()
+
+	for r in roomid:
+		responseRoom.append(r[0]+' ')
+		
+	return HttpResponse(responseRoom)
+
 

@@ -2,8 +2,8 @@
 <html lang="en" class="no-js">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>N-life</title>
 		<meta name="description" content="Page Preloading Effect: Re-creating the effect seen on fontface.ninja" />
 		<meta name="keywords" content="page loading, effect, initial, logo, sliding, web design, css animation, transform" />
@@ -14,20 +14,14 @@
 		<link rel="stylesheet" type="text/css" href="/static/css/effect2.css" />
 		<link rel="stylesheet" type="text/css" href="/static/css/materialize.css" />
 		<script src="/static/js/modernizr.custom.js"></script>
-		<style type="text/css">
-input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px white inset;}
-		</style>
 		<script>
-			$(function() {
-			  if (navigator.userAgent.toLowerCase().indexOf("chrome") >= 0) {
-			      $(window).load(function(){
-				  $('ul input:not(input[type=submit])').each(function(){
-				      var outHtml = this.outerHTML;
-				      $(this).append(outHtml);
-				  });
-			      });
-			  }
-			});
+			var _hmt = _hmt || [];
+			(function() {
+			var hm = document.createElement("script");
+			hm.src = "//hm.baidu.com/hm.js?2cfbb8bafca447b2200892a0f2f90c66";
+			var s = document.getElementsByTagName("script")[0]; 
+			s.parentNode.insertBefore(hm, s);
+			})();
 		</script>
 	</head>
 	<body class="demo-2">
@@ -497,7 +491,7 @@ c9 15 39 72 67 127 28 55 65 127 82 159 17 32 31 64 31 71 0 11 -41 35 -60 35
 				</div>
 			</header>
 			<!-- top bar -->
-			
+
 			<!-- main content -->
 			<div class="ip-main">
 				<br/>
@@ -541,8 +535,12 @@ c9 15 39 72 67 127 28 55 65 127 82 159 17 32 31 64 31 71 0 11 -41 35 -60 35
 								<br/>
 						</div>
 					</div>
-
-
+					<div class="container">
+						<h6 class="center-align">
+							{{ error }}
+							自习室查询功能上线啦！！
+						</h6>
+					</div>
 					<div class="row">
 
 						<div class="col s1 m3 l4">
@@ -560,7 +558,7 @@ c9 15 39 72 67 127 28 55 65 127 82 159 17 32 31 64 31 71 0 11 -41 35 -60 35
 						<div class="col s1 m3 l4">
 							<br/>
 						</div>
-
+				
 					</div>
 
 				</form>
