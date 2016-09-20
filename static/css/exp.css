@@ -2662,7 +2662,7 @@ a {
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
-  border-left: 5px solid #ee6e73;
+  border-left: 5px solid #47A3DA;
 }
 
 i {
@@ -3033,7 +3033,7 @@ td, th {
 }
 
 .collection {
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.0rem 0 0rem 0;
   border: 1px solid #e0e0e0;
   border-radius: 2px;
   overflow: hidden;
@@ -7555,7 +7555,7 @@ small {
 }
 
 .card .card-content {
-  padding: 20px;
+  padding: 0px;
   border-radius: 0 0 2px 2px;
 }
 
@@ -7574,7 +7574,7 @@ small {
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
-  color: #ffab40;
+  color: #9c9c9c;
   margin-right: 20px;
   transition: color .3s ease;
   text-transform: uppercase;
